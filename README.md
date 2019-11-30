@@ -1,5 +1,5 @@
-# Focus start express app
-- git clone https://github.com/KaragedovKirill/express-back.git
-- cd express-back
+# Focus start - delway project
+- git clone https://github.com/vinloy11/cft-delway.git
+- cd delway-cft
 - npm install
 - npm start
