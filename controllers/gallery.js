@@ -3,9 +3,9 @@ const {validate} = require('jsonschema');
 const db = require('../db/db');
 
 const getGallery = (req, res, next) => {
-    let tasks = [];
+    let gallery = [];
     try {
-        tasks = db.get('gallery');
+        gallery = db.get('gallery');
     } catch (error) {
         throw new Error(error);
     }
@@ -86,6 +86,8 @@ const deletePhoto = (req, res, next) => {
 
     res.json({status: 'OK'});
 };
+
+
 
 module.exports = {
     getGallery,

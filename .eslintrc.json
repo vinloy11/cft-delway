@@ -12,7 +12,9 @@
     "arrow-body-style": "off",
     "function-paren-newline": "off",
     "no-plusplus": "off",
-    "space-before-function-paren": 0
+    "space-before-function-paren": 0,
+    "space-in-parens": ["error", "never"],
+    "object-curly-spacing": ["error", "never"]
 
   }
 }
