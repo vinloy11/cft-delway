@@ -4,6 +4,8 @@ const router = express.Router();
 
 const tasksController = require('../controllers/tasks');
 
+
+
 // GET /tasks
 router.get('/', tasksController.getTasks);
 
@@ -18,5 +20,6 @@ router.patch('/:id', tasksController.editTask);
 
 // DELETE /tasks/:id
 router.delete('/:id', tasksController.deleteTask);
+
 
 module.exports = router;

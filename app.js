@@ -5,6 +5,8 @@ const app = express();
 
 const tasksRotues = require('./routes/tasks');
 
+const galleryRoutes = require('./routes/gallery');
+
 app.use(bodyParser.json()); // application/json
 
 app.use((req, res, next) => {
@@ -15,6 +17,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/tasks', tasksRotues);
+app.use('/gallery', galleryRoutes);
 
 // Error handling
 app.use((err, req, res, next) => {
