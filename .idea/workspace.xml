@@ -2,21 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c61c9b10-def8-4065-bdb0-2434203f0a56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lol.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/a7187e713702607fe76fbb2c975ea746" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/avatar-1575301492890.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/avatar-1575301613051.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/avatar-15753016507287bit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/avatar-1575302136046.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/avatar-1575302217039.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/avatar-1575302348632.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/avatar-1575302365068.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/bfedc289764dc875f78fa88c50deb1f7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a7187e713702607fe76fbb2c975ea746" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatar-1575301492890.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatar-1575301613051.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatar-15753016507287bit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatar-1575302136046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatar-1575302217039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatar-1575302348632.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatar-1575302365068.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/bfedc289764dc875f78fa88c50deb1f7" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,18 +83,35 @@
       <workItem from="1575176120274" duration="4718000" />
       <workItem from="1575215375021" duration="39000" />
       <workItem from="1575299081586" duration="1000" />
-      <workItem from="1575299092725" duration="3945000" />
+      <workItem from="1575299092725" duration="4203000" />
+      <workItem from="1575373821895" duration="5785000" />
     </task>
+    <task id="LOCAL-00001" summary="Added blunt upload">
+      <created>1575303117362</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575303117362</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added blunt upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added blunt upload" />
   </component>
   <component name="WindowStateProjectService">
     <state x="452" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575300959004">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="452" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1575300959004" />
+    <state x="393" y="5" key="CommitChangelistDialog2" timestamp="1575303113986">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1575303113986" />
     <state x="510" y="149" key="FileChooserDialogImpl" timestamp="1575215422721">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

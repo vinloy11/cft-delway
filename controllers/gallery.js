@@ -1,6 +1,19 @@
 const shortid = require('shortid');
 const {validate} = require('jsonschema');
+const multer = require('multer');
 const db = require('../db/db');
+
+const storage = multer.diskStorage({
+    destination (req, file, cb) {
+        cb(null, 'uploads/');
+    },
+    filename (req, file, cb) {
+        const encodingFile = file.originalname.slice(file.originalname.indexOf('.'));
+        if (encodingFile === '.jpg' || encodingFile === '.png');
+        cb(null, `${file.fieldname}-${Date.now()}${encodingFile}`);
+    },
+});
+const upload = multer({storage});
 
 const getGallery = (req, res, next) => {
     let gallery = [];
@@ -16,7 +29,7 @@ const getPhoto = (req, res, next) => {
     const {id} = req.params;
 
     const photo = db
-        .get('photo')
+        .get('gallery')
         .find({id})
         .value();
 
@@ -28,31 +41,13 @@ const getPhoto = (req, res, next) => {
 };
 
 const createPhoto = (req, res, next) => {
-    const photoSchema = {
-        type: 'object',
-        properties: {
-            title: {type: 'string'},
-            description: {type: 'string'}
-        },
-        required: ['title', 'description'],
-        additionalProperties: false
-    };
-
-    const validationResult = validate(req.body, photoSchema);
-    if (!validationResult.valid) {
-        throw new Error('INVALID_JSON_OR_API_FORMAT');
-    }
-
-    const {title, description} = req.body;
+    const pathPhoto = `/${req.file.destination}${req.file.filename}`;
     const photo = {
         id: shortid.generate(),
-        title,
-        description,
-        completed: false
+        path: pathPhoto
     };
-
     try {
-        db.get('photo')
+        db.get('gallery')
             .push(photo)
             .write();
     } catch (error) {
@@ -65,20 +60,6 @@ const createPhoto = (req, res, next) => {
     });
 };
 
-const editPhoto = (req, res, next) => {
-    const {id} = req.params;
-
-    const editedPhoto = db
-        .get('photo')
-        .find({id})
-        .assign(req.body)
-        .value();
-
-    db.write();
-
-    res.json({status: 'OK', data: editedPhoto});
-};
-
 const deletePhoto = (req, res, next) => {
     db.get('gallery')
         .remove({id: req.params.id})
@@ -87,12 +68,10 @@ const deletePhoto = (req, res, next) => {
     res.json({status: 'OK'});
 };
 
-
-
 module.exports = {
+    upload,
     getGallery,
     getPhoto,
     createPhoto,
-    editPhoto,
-    deletePhoto
+    deletePhoto,
 };

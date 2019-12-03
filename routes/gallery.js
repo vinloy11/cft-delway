@@ -1,19 +1,16 @@
 const express = require('express');
 
 const router = express.Router();
-
-const galleryController = require('../controllers/gallery')
+const galleryController = require('../controllers/gallery');
 // GET /gallery
 router.get('/', galleryController.getGallery);
 
 // GET /gallery/:id
-router.get('/:id', galleryController.getGallery);
+router.get('/:id', galleryController.getPhoto);
 
 // POST /gallery
-router.post('/', galleryController.createPhoto);
+router.post('/', galleryController.upload.single('avatar'), galleryController.createPhoto);
 
-// PATCH /gallery/:id
-router.patch('/:id', galleryController.editPhoto);
 
 // DELETE /gallery/:id
 router.delete('/:id', galleryController.deletePhoto);
